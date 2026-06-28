@@ -7,14 +7,20 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background:#000; color:#FFF; font-family: 'Montserrat', Arial, sans-serif; text-align:center; padding:40px 20px; }
-    .container { max-width: 800px; margin: 0 auto; }
+    .container { max-width: 900px; margin: 0 auto; }
     h1 { font-size: 52px; font-weight: 900; letter-spacing: 2px; }
-    h2 { font-size: 24px; color:#CCC; margin:20px 0 30px; }
-    .btn { background:#FFF; color:#000; padding:18px 40px; font-size:20px; font-weight:700; text-decoration:none; border-radius:8px; display:inline-block; margin:20px 0; }
+    h2 { font-size: 24px; color:#CCC; margin:20px 0 40px; }
+    
+    .btn-row { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin:30px 0 60px; }
+    .btn { background:#FFF; color:#000; padding:20px 35px; font-size:18px; font-weight:700; text-decoration:none; border-radius:8px; display:inline-block; min-width:280px; }
+    .btn-outline { background:transparent; color:#FFF; border:2px solid #FFF; }
+    .btn-postular { background:#FFF; color:#000; padding:14px 30px; font-size:16px; font-weight:700; text-decoration:none; border-radius:8px; display:inline-block; margin-top:15px; }
+
     .aviso { background:#111; padding:30px; margin:30px 0; text-align:left; border-left:5px solid #FFF; border-radius:8px; }
     .aviso h3 { font-size:32px; margin-bottom:10px; }
     .aviso p { font-size:18px; margin:8px 0; }
     .tag { background:#FFF; color:#000; padding:5px 12px; font-size:14px; font-weight:700; border-radius:4px; display:inline-block; margin-bottom:10px; }
+    
     .box { border:2px solid #FFF; padding:40px; margin:60px 0; border-radius:12px; background:#111; }
     footer { margin-top:60px; color:#AAA; border-top:2px solid #FFF; padding-top:30px; }
   </style>
@@ -24,45 +30,66 @@
     <header>
       <h1>LABUROYA CABA</h1>
       <h2>Empleos reales en Capital Federal. YA.</h2>
-      <a href="https://wa.me/5492983389710?text=Hola!%20Quiero%20publicar%20un%20aviso%20en%20CABA" class="btn" target="_blank">
-        PUBLICAR AVISO GRATIS
-      </a>
+
+      <div class="btn-row">
+        <a href="#buscar" class="btn">BUSCAR TRABAJO</a>
+        <a href="#ofrecer" class="btn btn-outline">OFRECER TRABAJO</a>
+      </div>
     </header>
 
     <main>
-      <h2 style="margin-top:50px;">ÚLTIMOS AVISOS</h2>
+      <!-- SECCION 1: BUSCAR TRABAJO -->
+      <section id="buscar">
+        <h2>¿BUSCÁS LABURO EN CABA?</h2>
 
-      <div class="aviso">
-        <span class="tag">URGENTE</span>
-        <h3>REPARTIDOR APP</h3>
-        <p><strong>Lugar:</strong> Palermo / Recoleta</p>
-        <p><strong>Horario:</strong> Full Time / Part Time</p>
-        <p><strong>Requisitos:</strong> Moto + App + Monotributo</p>
-        <p><strong>Contacto:</strong> 11-5555-6666</p>
-      </div>
+        <div class="aviso">
+          <span class="tag">URGENTE</span>
+          <h3>REPARTIDOR APP</h3>
+          <p><strong>Lugar:</strong> Palermo / Recoleta</p>
+          <p><strong>Horario:</strong> Full Time / Part Time</p>
+          <p><strong>Requisitos:</strong> Moto + App + Monotributo</p>
+          <a href="https://wa.me/5492983389710?text=Hola!%20Quiero%20postularme%20a%20REPARTIDOR%20APP%20CABA" class="btn-postular" target="_blank">
+            QUIERO POSTULARME
+          </a>
+        </div>
 
-      <div class="aviso">
-        <span class="tag">NUEVO</span>
-        <h3>MOZO</h3>
-        <p><strong>Lugar:</strong> Bar Centro - Microcentro</p>
-        <p><strong>Horario:</strong> Noche, Miércoles a Domingo</p>
-        <p><strong>Requisitos:</strong> Experiencia + Buena presencia</p>
-        <p><strong>Contacto:</strong> 11-4444-3333</p>
-      </div>
+        <div class="aviso">
+          <span class="tag">NUEVO</span>
+          <h3>MOZO</h3>
+          <p><strong>Lugar:</strong> Bar Centro - Microcentro</p>
+          <p><strong>Horario:</strong> Noche, Miércoles a Domingo</p>
+          <p><strong>Requisitos:</strong> Experiencia + Buena presencia</p>
+          <a href="https://wa.me/5492983389710?text=Hola!%20Quiero%20postularme%20a%20MOZO%20CABA" class="btn-postular" target="_blank">
+            QUIERO POSTULARME
+          </a>
+        </div>
 
-      <div class="box">
-        <h2 style="font-size:36px; margin-bottom:20px;">PLAN PRO $5.000/MES</h2>
-        <p style="font-size:18px;color:#CCC;margin-bottom:20px;">CV profesional + Te postulamos a TODO CABA todo el mes</p>
-        <p style="font-size:16px;color:#AAA; text-align:left; max-width:500px; margin:0 auto 20px;">
-          ✅ CV negro/blanco profesional con QR <br>
-          ✅ Postulaciones ilimitadas a empresas de CABA <br>
-          ✅ Prioridad en todos los avisos nuevos
+        <div class="box">
+          <h2 style="font-size:36px; margin-bottom:20px;">PLAN PRO $5.000/MES</h2>
+          <p style="font-size:18px;color:#CCC;margin-bottom:20px;">CV profesional + Te postulamos a TODO CABA todo el mes</p>
+          <p style="font-size:16px;color:#AAA; text-align:left; max-width:500px; margin:0 auto 20px;">
+            ✅ CV negro/blanco profesional con QR <br>
+            ✅ Postulaciones ilimitadas a empresas de CABA <br>
+            ✅ Prioridad en todos los avisos nuevos
+          </p>
+          <p style="font-size:14px;color:#AAA;margin-bottom:20px;">Cancelar cuando quieras. Sin atadas.</p>
+          <a href="https://wa.me/5492983389710?text=Hola!%20Quiero%20Plan%20PRO%20MES%20CABA" class="btn" target="_blank">
+            SUSCRIBIRME POR $5.000
+          </a>
+        </div>
+      </section>
+
+      <!-- SECCION 2: OFRECER TRABAJO -->
+      <section id="ofrecer" style="margin-top:80px;">
+        <h2>¿NECESITÁS GENTE PARA TU LOCAL?</h2>
+        <p style="font-size:18px; color:#CCC; max-width:600px; margin:0 auto 30px;">
+          Publicá tu aviso gratis en 2 minutos. Yo te mando los CVs filtrados por WhatsApp.
         </p>
-        <p style="font-size:14px;color:#AAA;margin-bottom:20px;">Cancelar cuando quieras. Sin atadas.</p>
-        <a href="https://wa.me/5492983389710?text=Hola!%20Quiero%20Plan%20PRO%20MES%20CABA" class="btn" target="_blank">
-          SUSCRIBIRME POR $5.000
+        <a href="https://wa.me/5492983389710?text=Hola!%20Quiero%20PUBLICAR%20un%20aviso%20en%20CABA" class="btn" target="_blank">
+          PUBLICAR AVISO GRATIS
         </a>
-      </div>
+        <p style="font-size:14px;color:#AAA;margin-top:15px;">100% Gratis. Vos elegís a quién contratar.</p>
+      </section>
 
     </main>
 
