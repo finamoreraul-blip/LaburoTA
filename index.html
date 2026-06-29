@@ -6,6 +6,7 @@
   <title>LaburoYa CABA | Empleos Capital Federal YA</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body { background:#000; color:#FFF; font-family: 'Montserrat', Arial, sans-serif; text-align:center; padding:40px 20px; }
     .container { max-width: 900px; margin: 0 auto; }
     h1 { font-size: 52px; font-weight: 900; letter-spacing: 2px; }
@@ -24,6 +25,7 @@
     .box { border:2px solid #FFF; padding:40px; margin:60px 0; border-radius:12px; background:#111; text-align:left; }
     .box label { font-size:16px; font-weight:700; display:block; margin-top:15px; }
     .box input, .box textarea, .box select { width:100%; padding:12px; margin:8px 0 10px; background:#222; color:#FFF; border:1px solid #555; border-radius:6px; font-size:16px; }
+    .divider { width:100%; height:2px; background:#FFF; margin:80px 0; }
     footer { margin-top:60px; color:#AAA; border-top:2px solid #FFF; padding-top:30px; text-align:center; }
   </style>
 </head>
@@ -32,6 +34,7 @@
     <header>
       <h1>LABUROYA CABA</h1>
       <h2>Empleos reales en Capital Federal. YA.</h2>
+
       <div class="btn-row">
         <a href="#buscar" class="btn">BUSCAR TRABAJO</a>
         <a href="#ofrecer" class="btn btn-outline">OFRECER TRABAJO</a>
@@ -39,9 +42,10 @@
     </header>
 
     <main>
-      <!-- SECCION 1: BUSCAR TRABAJO -->
+      <!-- SECCION 1: BUSCAR TRABAJO - CON SUSCRIPCIÓN -->
       <section id="buscar">
         <h2>¿BUSCÁS LABURO EN CABA?</h2>
+
         <div class="aviso">
           <span class="tag">URGENTE</span>
           <h3>REPARTIDOR APP</h3>
@@ -50,107 +54,61 @@
           <a href="https://wa.me/5492983389710?text=Hola!%20Quiero%20postularme%20a%20REPARTIDOR%20APP%20CABA" class="btn-postular" target="_blank">QUIERO POSTULARME</a>
         </div>
 
+        <div class="aviso">
+          <span class="tag">NUEVO</span>
+          <h3>MOZO</h3>
+          <p><strong>Lugar:</strong> Bar Centro - Microcentro</p>
+          <p><strong>Horario:</strong> Noche, Miércoles a Domingo</p>
+          <a href="https://wa.me/5492983389710?text=Hola!%20Quiero%20postularme%20a%20MOZO%20CABA" class="btn-postular" target="_blank">QUIERO POSTULARME</a>
+        </div>
+
         <!-- FORMULARIO PLAN PRO $5.000/MES -->
         <div class="box" id="form-pro">
           <h2 style="font-size:36px; text-align:center; margin-bottom:10px;">PLAN PRO $5.000/MES</h2>
           <p style="text-align:center; color:#CCC; margin-bottom:30px;">Cargá tus datos. Te llegan a mi WhatsApp y te postulo HOY.</p>
-
           <form id="proForm">
-            <label>1. Nombre y Apellido *</label>
-            <input type="text" id="nombre" required>
-
-            <label>2. WhatsApp con 11 *</label>
-            <input type="text" id="whatsapp" placeholder="11XXXXXXXX" required>
-
-            <label>3. Edad *</label>
-            <input type="number" id="edad" required>
-
-            <label>4. Zona donde vivís en CABA *</label>
-            <input type="text" id="zona" placeholder="Ej: Palermo" required>
-
-            <label>5. ¿A qué te dedicas / Experiencia? *</label>
-            <textarea id="experiencia" placeholder="Ej: 2 años de mozo, repartidor" required></textarea>
-
-            <label>6. Estudios</label>
-            <select id="estudios">
-              <option>Secundario Incompleto</option>
-              <option>Secundario Completo</option>
-              <option>Terciario/Universitario</option>
-            </select>
-
-            <label>7. ¿Qué trabajo buscás? *</label>
-            <input type="text" id="puesto" placeholder="Ej: Mozo, Repartidor, Vendedor" required>
-
-            <label>8. Disponibilidad Horaria *</label>
-            <input type="text" id="disponibilidad" placeholder="Ej: Noches y Finde" required>
-
-            <label>9. ¿Tenés movilidad?</label>
-            <select id="movilidad">
-              <option>Moto</option>
-              <option>Auto</option>
-              <option>Colectivo/Subte</option>
-              <option>Ninguna</option>
-            </select>
-            
-            <label>10. Sueldo pretendido por mes</label>
-            <input type="text" id="sueldo" placeholder="Ej: $400.000">
-
-            <label>11. Foto tipo CV *</label>
-            <p style="font-size:13px; color:#AAA; margin-bottom:10px;">Mandala por WhatsApp cuando te hable. No se puede subir acá.</p>
-
+            <label>1. Nombre y Apellido *</label><input type="text" id="nombre" required>
+            <label>2. WhatsApp con 11 *</label><input type="text" id="whatsapp" required>
+            <label>3. Edad *</label><input type="number" id="edad" required>
+            <label>4. Zona donde vivís en CABA *</label><input type="text" id="zona" required>
+            <label>5. Experiencia *</label><textarea id="experiencia" required></textarea>
+            <label>6. ¿Qué trabajo buscás? *</label><input type="text" id="puesto" required>
+            <label>7. Disponibilidad Horaria *</label><input type="text" id="disponibilidad" required>
+            <label>8. Foto tipo CV *</label><p style="font-size:13px; color:#AAA;">Mandala por WhatsApp cuando te hable.</p>
             <p style="font-size:14px;color:#AAA;margin:20px 0; text-align:center;">Cancelar cuando quieras. Sin atadas.</p>
             <button type="submit" class="btn">ENVIAR POR WHATSAPP + PAGAR $5.000</button>
           </form>
         </div>
       </section>
 
-      <!-- SECCION 2: OFRECER TRABAJO -->
-      <section id="ofrecer" style="margin-top:80px;">
+      <div class="divider"></div>
+
+      <!-- SECCION 2: OFRECER TRABAJO - SIN SUSCRIPCIÓN -->
+      <section id="ofrecer">
         <h2>¿NECESITÁS GENTE PARA TU LOCAL?</h2>
         <p style="font-size:18px; color:#CCC; max-width:600px; margin:0 auto 30px; text-align:center;">
-          Completá acá. Te llegan postulantes de CABA directo a mi WhatsApp.
+          Completá acá. Publicación 100% Gratis. Yo te mando CVs filtrados.
         </p>
 
         <div class="box">
           <form id="empresaForm">
-            <label>1. Nombre de tu Empresa/Local *</label>
-            <input type="text" id="emp_nombre" placeholder="Ej: Pizzeria El Rocho" required>
-
-            <label>2. Tu WhatsApp de contacto *</label>
-            <input type="text" id="emp_whatsapp" placeholder="11XXXXXXXX" required>
-
+            <label>1. Nombre de tu Empresa/Local *</label><input type="text" id="emp_nombre" required>
+            <label>2. Tu WhatsApp de contacto *</label><input type="text" id="emp_whatsapp" required>
             <label>3. Rubro *</label>
             <select id="emp_rubro" required>
               <option>Gastronomía - Bar/Pizzeria</option>
               <option>Reparto/Delivery</option>
               <option>Comercio/Ventas</option>
               <option>Limpieza/Mantenimiento</option>
-              <option>Administración</option>
               <option>Otro</option>
             </select>
-
-            <label>4. Puesto a cubrir *</label>
-            <input type="text" id="emp_puesto" placeholder="Ej: Mozo, Repartidor" required>
-
-            <label>5. Zona de CABA *</label>
-            <input type="text" id="emp_zona" placeholder="Ej: Microcentro" required>
-
-            <label>6. ¿Cuánto pagás por mes? *</label>
-            <input type="text" id="emp_sueldo" placeholder="Ej: $450.000 + propinas" required>
-
-            <label>7. Horario de trabajo *</label>
-            <input type="text" id="emp_horario" placeholder="Ej: Noche Mié a Dom" required>
-
-            <label>8. Requisitos *</label>
-            <textarea id="emp_requisitos" placeholder="Ej: Experiencia, buena presencia, moto" required></textarea>
-            
-            <label>9. ¿Es urgente?</label>
-            <select id="emp_urgente">
-              <option>No</option>
-              <option>Si, para esta semana</option>
-            </select>
-
-            <p style="font-size:14px;color:#AAA;margin:20px 0; text-align:center;">100% Gratis. Yo te filtro los CVs.</p>
+            <label>4. Puesto a cubrir *</label><input type="text" id="emp_puesto" required>
+            <label>5. Zona de CABA *</label><input type="text" id="emp_zona" required>
+            <label>6. ¿Cuánto pagás por mes? *</label><input type="text" id="emp_sueldo" placeholder="$450.000 + propinas" required>
+            <label>7. Horario de trabajo *</label><input type="text" id="emp_horario" required>
+            <label>8. Requisitos *</label><textarea id="emp_requisitos" required></textarea>
+            <label>9. ¿Es urgente?</label><select id="emp_urgente"><option>No</option><option>Si, para esta semana</option></select>
+            <p style="font-size:14px;color:#AAA;margin:20px 0; text-align:center;">Sin comisión. Sin planes. Solo gratis.</p>
             <button type="submit" class="btn">PUBLICAR AVISO POR WHATSAPP</button>
           </form>
         </div>
@@ -163,39 +121,20 @@
   </div>
 
 <script>
-// FORM PLAN PRO
+// FORM PLAN PRO - VA A TU WHATSAPP + LINK MP
 document.getElementById('proForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const nombre = document.getElementById('nombre').value;
-  const whatsapp = document.getElementById('whatsapp').value;
-  const edad = document.getElementById('edad').value;
-  const zona = document.getElementById('zona').value;
-  const experiencia = document.getElementById('experiencia').value;
-  const estudios = document.getElementById('estudios').value;
-  const puesto = document.getElementById('puesto').value;
-  const disponibilidad = document.getElementById('disponibilidad').value;
-  const movilidad = document.getElementById('movilidad').value;
-  const sueldo = document.getElementById('sueldo').value;
+  const n=document.getElementById('nombre').value,w=document.getElementById('whatsapp').value,e1=document.getElementById('edad').value,z=document.getElementById('zona').value,ex=document.getElementById('experiencia').value,p=document.getElementById('puesto').value,d=document.getElementById('disponibilidad').value;
   const linkPago = 'https://mpago.la/TU-LINK-DE-5000'; // <-- PEGÁ TU LINK MP ACÁ
-
-  const mensaje = `*NUEVO PLAN PRO CABA - $5.000/MES*%0A%0A*Nombre:* ${nombre}%0A*WhatsApp:* ${whatsapp}%0A*Edad:* ${edad}%0A*Zona:* ${zona}%0A*Busca:* ${puesto}%0A*Exp:* ${experiencia}%0A*Estudios:* ${estudios}%0A*Disp:* ${disponibilidad}%0A*Movilidad:* ${movilidad}%0A*Sueldo:* ${sueldo}%0A%0A*PAGO:* ${linkPago}%0A%0AFoto CV: Te la mando por acá`;
+  const mensaje = `*NUEVO PLAN PRO CABA*%0A%0A*Nombre:* ${n}%0A*WhatsApp:* ${w}%0A*Edad:* ${e1}%0A*Zona:* ${z}%0A*Busca:* ${p}%0A*Exp:* ${ex}%0A*Disp:* ${d}%0A%0A*PAGO:* ${linkPago}`;
   window.open(`https://wa.me/5492983389710?text=${mensaje}`, '_blank');
 });
 
-// FORM EMPRESA
+// FORM EMPRESA - VA A TU WHATSAPP SIN VENTA
 document.getElementById('empresaForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const emp_nombre = document.getElementById('emp_nombre').value;
-  const emp_whatsapp = document.getElementById('emp_whatsapp').value;
-  const emp_rubro = document.getElementById('emp_rubro').value;
-  const emp_puesto = document.getElementById('emp_puesto').value;
-  const emp_zona = document.getElementById('emp_zona').value;
-  const emp_sueldo = document.getElementById('emp_sueldo').value;
-  const emp_horario = document.getElementById('emp_horario').value;
-  const emp_requisitos = document.getElementById('emp_requisitos').value;
-  const emp_urgente = document.getElementById('emp_urgente').value;
-
-  const mensaje = `*NUEVO AVISO EMPRESA CABA*%0A%0A*Empresa:* ${emp_nombre}%0A*Contacto:* ${emp_whatsapp}%0A*Rubro:* ${emp_rubro}%0A*Puesto:* ${emp_puesto}%0A*Zona:* ${emp_zona}%0A*Sueldo:* ${emp_sueldo}%0A*Horario:* ${emp_horario}%0A*Requisitos:* ${emp_requisitos}%0A*Urgente:* ${emp_urgente}%0A%0AQuiero que lo publiques GRATIS`;
+  const n=document.getElementById('emp_nombre').value,w=document.getElementById('emp_whatsapp').value,r=document.getElementById('emp_rubro').value,p=document.getElementById('emp_puesto').value,z=document.getElementById('emp_zona').value,s=document.getElementById('emp_sueldo').value,h=document.getElementById('emp_horario').value,re=document.getElementById('emp_requisitos').value,u=document.getElementById('emp_urgente').value;
+  const mensaje = `*NUEVO AVISO EMPRESA CABA*%0A%0A*Empresa:* ${n}%0A*Contacto:* ${w}%0A*Rubro:* ${r}%0A*Puesto:* ${p}%0A*Zona:* ${z}%0A*Sueldo:* ${s}%0A*Horario:* ${h}%0A*Requisitos:* ${re}%0A*Urgente:* ${u}`;
   window.open(`https://wa.me/5492983389710?text=${mensaje}`, '_blank');
 });
 </script>
